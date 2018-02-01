@@ -1,0 +1,12 @@
+version: "2"
+services:
+  nginx-proxy:
+    build: .
+    image: croudtech/nginx-proxy:dev
+    environment:
+      UPSTREAM: $UPSTREAM
+      SSL_CERT: $SSL_CERT
+      SSL_KEY: $SSL_KEY
+    ports:
+      - 80:80
+      - 443:443

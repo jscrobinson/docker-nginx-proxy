@@ -1,0 +1,6 @@
+[template]
+src = "proxy.conf.tmpl"
+dest = "/etc/nginx/conf.d/default.conf"
+keys = [
+    "UPSTREAM",
+]
