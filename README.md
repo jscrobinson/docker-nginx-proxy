@@ -1,0 +1,20 @@
+# Docker NGINX reverse proxy
+
+Simple reverse proxy.
+
+## Docker compose file
+
+```json
+version: "2"
+services:
+  nginx-proxy:
+    build: .
+    image: jimfrastructure/nginx-proxy:dev
+    environment:
+      UPSTREAM: $UPSTREAM
+      SSL_CERT: $SSL_CERT
+      SSL_KEY: $SSL_KEY
+    ports:
+      - 80:80
+      - 443:443
+```
